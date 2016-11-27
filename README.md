@@ -13,12 +13,22 @@ A flexible Halfcard component for React native with callbacks and adjustable sli
     slideDuration={500}
     onShow={this.onShow}
     onClose={this.onCloseModalOne}>
-    {this.halfcardOneContent()}
+      {this.myHalfcardContent()}
   </HalfCard>
 }
 ```
 
-To open the halfcard call ```this.my_halfcard.show() ``` method and to close call ```this.my_halfcard.close() ``` method!
+Any valid React Native View can be passed as content of the halfcard.
+To open the halfcard call ```this.my_halfcard.show() ``` method and to close call ```this.my_halfcard.close() ``` method.
+
+### Installation
+- `npm install --save rn-halfcard`
+
+License
+----
+MIT
+
+
 
 
 
