@@ -28,13 +28,13 @@ class Halfcard extends Component {
 					transparent={true}
           visible={this.state.modalVisible}
 					onShow={this.props.onShow}
-					onRequestClose={this.hide_modal.bind(this)}>
+					onRequestClose={this.close.bind(this)}>
 
          <View style={{flex: 1}}>
 				 	<TouchableHighlight
 						style={styles.overlay}
 						underlayColor='rgba(0,0,0,0.4)'
-						onPress = {this.hide_modal.bind(this)}>
+						onPress = {this.close.bind(this)}>
 							<View/>
 					</TouchableHighlight>
 
@@ -53,32 +53,35 @@ class Halfcard extends Component {
   }
 
 	animate_up() {
+		let animation_duration = this.props.slideDuration || 300
 		Animated.timing(
 			this.state.position,
 			{
 				toValue: 0,
-				duration: 300
+				duration: animation_duration
 			},
 		).start()
 	}
 
 	animate_down() {
+		let animation_duration = this.props.slideDuration || 300
 		let {height} = Dimensions.get('window')
 		let slide_down_to = height * -1
 		Animated.timing(
 			this.state.position,
 			{
 				toValue: slide_down_to,
-				duration: 300
+				duration: animation_duration
 			},
 		).start()
 	}
 
-	hide_modal() {
+	close() {
+		let animation_duration = this.props.slideDuration || 300
 		this.animate_down()
 		setTimeout(() => {
 			this.setModalVisible(false)
-		}, 300)
+		}, animation_duration)
 		this.props.onClose && this.props.onClose()
 	}
 
