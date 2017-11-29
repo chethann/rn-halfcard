@@ -1,9 +1,9 @@
 # rn-halfcard
-Halfcard for React Native. 
+Halfcard for React Native.
 A flexible Halfcard component for React native with callbacks and adjustable slide duration!
 
 # Demo
-![rn-halfcard Demo](https://github.com/chethann/rn-halfcard/blob/master/demo/demo.gif)
+![rn-halfcard Demo](https://github.com/chethann/demo-images/blob/master/halfcard-demo.gif)
 
 # Usage
 
@@ -27,8 +27,3 @@ To open the halfcard call ```this.my_halfcard.show() ``` method and to close cal
 License
 ----
 MIT
-
-
-
-
-
