@@ -15,7 +15,6 @@ A flexible Halfcard component for React native with callbacks and adjustable sli
     onClose={this.onCloseModalOne}>
       {this.myHalfcardContent()}
   </HalfCard>
-}
 ```
 
 Any valid React Native View can be passed as content of the halfcard.
